@@ -1,0 +1,55 @@
+{
+  "SEO": {
+    "TITLE": "Jesús Cruz | Desarrollador Full Stack & Analista de Datos",
+    "DESCRIPTION": "Portafolio de Jesús Cruz Morales con proyectos y experiencia en desarrollo web y análisis de datos."
+  },
+  "HEADER": {
+    "ABOUT": "Sobre mí",
+    "SKILLS": "Habilidades",
+    "PROJECTS": "Proyectos",
+    "CONTACT": "Contacto"
+  },
+  "THEME":{
+    "LIGHT": "☀️ Modo claro",
+    "DARK": "🌙 Modo oscuro"
+  },
+  "HERO":{
+    "DESCRIPTION": "Desarrollador Full Stack • Analista de Datos",
+    "PROJECTS": "Ver Projectos",
+    "CONTACT": "Contactar"
+  },
+  "ABOUT":{
+    "HELLO": "Hola, soy Jesús",
+    "TEXT": "Desarrollador especializado en <strong class=\"text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)]\">Angular</strong> y apasionado por integrar <strong class=\"text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)]\">desarrollo</strong>, <strong class=\"text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)]\">análisis</strong> y <strong class=\"text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)]\">visualización</strong> para optimizar procesos y apoyar la toma de decisiones.<br> Me motiva combinar <em>diseño</em> y <em>tecnología</em> para crear experiencias funcionales y atractivas que generan un impacto real.",
+    "DOWNLOAD": "📄 Descargar CV",
+    "DATA_ANALYSIS": "Análisis de Datos"
+  },
+  "SKILLS":{
+    "TITLE": "Habilidades",
+    "TOOLS": "Herramientas"
+  },
+  "PROJECTS":{
+    "TITLE": "Proyectos Destacados",
+    "CODE": "Código"
+  },
+  "CONTACT":{
+    "TITLE": "Contáctame",
+    "DESCRIPTION": "¿Tienes un proyecto o idea en mente? Completa el formulario y me pondré en contacto contigo lo antes posible.",
+    "NAME": "Nombre",
+    "NAME_DESCRIPTION": "Tu nombre",
+    "EMAIL": "Correo electrónico",
+    "MESSAGE": "Mensaje",
+    "MESSAGE_DESCRIPTION": "Escribe tu mensaje aquí...",
+    "SEND": "Enviar",
+    "SENDING": "Enviando...",
+    "SUCCESS": "¡Mensaje enviado con éxito!",
+    "ERROR": "Ocurrió un error al enviar el mensaje.",
+    "REQUIRED": "Este campo es requerido",
+    "VALIDMAIL": "Por favor, introduzca un email válido",
+    "MINLENGTH": "Por favor, Introduzca al menos {{number}} caracteres",
+    "MAXLENGTH": "No debe superar {{number}} caracteres"
+  },
+  "FOTTER":{
+    "PHRASE": "© {{ currentYear }} Jesús Cruz — Todos los derechos reservados."
+  }
+}

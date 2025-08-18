@@ -1,0 +1,42 @@
+<div class="py-12 text-charcoal-900 dark:text-sand-50 bg-[var(--sand-dark)] dark:bg-[var(--sand-light)] transition-colors duration-300" appAnimateOnScroll>
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)] mb-12" fadeTranslate="PROJECTS.TITLE"></h2>
+
+    <div class="projects-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Proyecto -->
+      <div *ngFor="let project of projects" class="bg-white dark:bg-[var(--sand-dark)] rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+        <img [src]="project.image" alt="Proyecto 1" class="w-full h-48 object-cover"/>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)] mb-2">
+            {{ project.title }}
+          </h3>
+          <p class="dark:text-gray-300 mb-4">
+            {{ project.description }}
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span *ngFor="let tec of project.tecnologies" class="px-2 py-1 text-xs rounded bg-[var(--terracotta-dark)] text-white">
+              {{ tec }}
+            </span>
+          </div>
+          <div class="flex gap-4">
+            <!-- Demo -->
+            <a [href]="project.demo" target="_blank" class="flex items-center gap-2 bg-terracota-500 dark:bg-terracota-500 text-white px-3 py-1 rounded-full hover:bg-opacity-80 transition">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+              </svg>
+              <span class="whitespace-nowrap">Demo</span>
+            </a>
+
+            <!-- Repo -->
+            <a [href]="project.code" target="_blank" class="flex items-center gap-2 bg-white text-terracota-500 px-3 py-1 rounded-full hover:bg-gray-100 transition shadow-md dark:shadow-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.263.82-.583 0-.288-.01-1.05-.015-2.06-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.303-5.467-1.334-5.467-5.933 0-1.31.468-2.38 1.235-3.22-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.52 11.52 0 013.003-.404c1.02.004 2.045.138 3.003.404 2.29-1.552 3.296-1.23 3.296-1.23.653 1.653.242 2.873.12 3.176.77.84 1.233 1.91 1.233 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.815 1.1.815 2.222 0 1.604-.015 2.896-.015 3.293 0 .322.218.698.825.58C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span class="whitespace-nowrap" fadeTranslate="PROJECTS.CODE"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

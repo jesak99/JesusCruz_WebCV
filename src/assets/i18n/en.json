@@ -1,0 +1,55 @@
+{
+  "SEO": {
+    "TITLE": "Jesús Cruz | Full Stack Developer & Data Analyst",
+    "DESCRIPTION": "Portfolio of Jesús Cruz Morales showcasing projects and experience in web development and data analysis."
+  },
+  "HEADER": {
+    "ABOUT": "About me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects",
+    "CONTACT": "Contact"
+  },
+  "THEME":{
+    "LIGHT": "☀️ Light mode",
+    "DARK": "🌙 Dark mode"
+  },
+  "HERO":{
+    "DESCRIPTION": "Full Stack Developer • Data Analyst",
+    "PROJECTS": "View Projects",
+    "CONTACT": "Get in Touch"
+  },
+  "ABOUT":{
+    "HELLO": "Hi, I'm Jesús",
+    "TEXT": "Developer specialized in <strong class=\"text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)]\">Angular</strong> and passionate about integrating <strong class=\"text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)]\">development</strong>, <strong class=\"text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)]\">analytics</strong> and <strong class=\"text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)]\">visualization</strong> to optimize processes and support decision making.<br> I'm motivated by combining <em>design</em> and <em>technology</em> to create functional and attractive experiences that generate a real impact.",
+    "DOWNLOAD": "📄 Download Resume",
+    "DATA_ANALYSIS": "Data Analysis"
+  },
+  "SKILLS":{
+    "TITLE": "Skills",
+    "TOOLS": "Tools"
+  },
+  "PROJECTS":{
+    "TITLE": "Featured Projects",
+    "CODE": "Code"
+  },
+  "CONTACT":{
+    "TITLE": "Contact Me",
+    "DESCRIPTION": "Do you have a project or idea in mind? Fill out the form and I'll get back to you as soon as possible.",
+    "NAME": "Name",
+    "NAME_DESCRIPTION": "Your name",
+    "EMAIL": "Email",
+    "MESSAGE": "Message",
+    "MESSAGE_DESCRIPTION": "Write your message here...",
+    "SEND": "Send",
+    "SENDING": "Sending...",
+    "SUCCESS": "Message sent successfully!",
+    "ERROR": "An error occurred while sending the message.",
+    "REQUIRED": "This field is required",
+    "VALIDMAIL": "Please enter a valid email address",
+    "MINLENGTH": "Please enter at least {{number}} characters",
+    "MAXLENGTH": "Must not exceed {{number}} characters"
+  },
+  "FOTTER":{
+    "PHRASE": "© {{ currentYear }} Jesús Cruz — All rights reserved."
+  }
+}

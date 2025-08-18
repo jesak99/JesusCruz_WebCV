@@ -1,0 +1,28 @@
+.section-pattern::before,
+.section-pattern::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background-image: url("/assets/patterns/bordado-rojo.svg");
+  background-repeat: repeat-y;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-pattern::before {
+  left: calc(50% - 80rem / 2 - 60px); /* pegado al lado izq del contenedor */
+}
+
+.section-pattern::after {
+  right: calc(50% - 80rem / 2 - 60px); /* pegado al lado der del contenedor */
+}
+
+@media (max-width: 1407px) {
+  .section-pattern::before,
+  .section-pattern::after {
+    display: none;
+  }
+}

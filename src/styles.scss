@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --sand-light: #f5f1e6;    /* Arena claro */
+  --sand-dark:  #e0d6c3;    /* Arena oscuro */
+  --terracotta-light: #e2725b; /* Terracota claro */
+  --terracotta-dark:  #a53f2b; /* Terracota oscuro */
+  --hero-bg: url('/assets/patterns/hero-pattern.svg');
+}
+
+.dark {
+  --sand-light: #2a2a2a;
+  --sand-dark:  #1e1e1e;
+  --terracotta-light: #ff8a70;
+  --terracotta-dark:  #d95c48;
+  --hero-bg: url('/assets/patterns/test.svg');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.section-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bg::before,
+.section-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.6s ease;
+}
+
+.section-bg::before {
+  background-image: url('/assets/patterns/hero-pattern.svg');
+  opacity: 1;
+}
+
+.section-bg::after {
+  background-image: url('/assets/patterns/test.svg');
+  opacity: 0;
+}
+
+.dark .section-bg::before {
+  opacity: 0;
+}
+
+.dark .section-bg::after {
+  opacity: 1;
+}
+

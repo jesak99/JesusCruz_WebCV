@@ -1,0 +1,50 @@
+<div class="py-20 bg-[var(--sand-light)] dark:bg-[var(--sand-dark)] transition-colors duration-300" appAnimateOnScroll>
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)] mb-12" fadeTranslate="SKILLS.TITLE"></h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Frontend -->
+      <div>
+        <h3 class="text-xl mb-4 text-center text-terracota-500 dark:text-terracota-300 font-semibold">
+          Front-end
+        </h3>
+        <div class="carousel flex gap-8 overflow-hidden" (mouseenter)="pauseCarousel('frontend')" (mouseleave)="resumeCarousel('frontend')">
+          <div class="carousel-track flex gap-8 animate-scroll" #frontendTrack>
+            <div *ngFor="let skill of frontendSkills.concat(frontendSkills)" class="flex flex-col items-center w-24">
+              <img [src]="skill.icon" alt="{{ skill.name }}" class="w-12 h-12 mb-2"/>
+              <span class="mt-2 font-medium">{{ skill.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div>
+        <h3 class="text-xl mb-4 text-center text-terracota-500 dark:text-terracota-300 font-semibold">
+          Back-end
+        </h3>
+        <div class="carousel flex gap-8 overflow-hidden" (mouseenter)="pauseCarousel('backend')" (mouseleave)="resumeCarousel('backend')">
+          <div class="carousel-track flex gap-8 animate-scroll" #backendTrack>
+            <div *ngFor="let skill of backendSkills.concat(backendSkills)" class="flex flex-col items-center w-24">
+              <img [src]="skill.icon" alt="{{ skill.name }}" class="w-12 h-12 mb-2"/>
+              <span class="mt-2 font-medium">{{ skill.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Herramientas -->
+      <div>
+        <h3 class="text-xl mb-4 text-center text-terracota-500 dark:text-terracota-300 font-semibold" fadeTranslate="SKILLS.TOOLS"></h3>
+        <div class="carousel flex gap-8 overflow-hidden" (mouseenter)="pauseCarousel('tools')" (mouseleave)="resumeCarousel('tools')">
+          <div class="carousel-track flex gap-8 animate-scroll" #toolsTrack>
+            <div *ngFor="let skill of toolsSkills.concat(toolsSkills)" class="flex flex-col items-center w-24">
+              <img [src]="skill.icon" alt="{{ skill.name }}" class="w-12 h-12 mb-2"/>
+              <span class="mt-2 font-medium">{{ skill.name }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

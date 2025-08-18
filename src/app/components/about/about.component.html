@@ -1,0 +1,62 @@
+<div class="py-5 text-charcoal-900 dark:text-sand-50 bg-[var(--sand-dark)] dark:bg-[var(--sand-light)] transition-colors duration-300" appAnimateOnScroll>
+  <div
+    class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+  >
+    <!-- Imagen -->
+    <div class="flex justify-center">
+      <img
+        src="assets/images/about/FotoPerfil.JPG"
+        alt="Foto de Jesús Cruz"
+        class="w-64 h-64 object-cover rounded-full border-4 border-[var(--terracotta-dark)] dark:border-[var(--terracotta-light)] shadow-lg"
+      />
+    </div>
+
+    <!-- Texto -->
+    <div>
+      <h2 class="text-3xl font-bold text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)] mb-4" fadeTranslate="ABOUT.HELLO"></h2>
+      <p class="text-lg text-gray-700 dark:text-gray-300 mb-6" fadeTranslate="ABOUT.TEXT"></p>
+
+      <!-- Habilidades -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
+        <span class="px-3 py-2 bg-[var(--sand-light)] dark:bg-[var(--sand-dark)] rounded-lg text-sm font-medium text-center">
+          Angular
+        </span>
+        <span class="px-3 py-2 bg-[var(--sand-light)] dark:bg-[var(--sand-dark)] rounded-lg text-sm font-medium text-center">
+          .NET
+        </span>
+        <span class="px-3 py-2 bg-[var(--sand-light)] dark:bg-[var(--sand-dark)] rounded-lg text-sm font-medium text-center">
+          SQL Server
+        </span>
+        <span class="px-3 py-2 bg-[var(--sand-light)] dark:bg-[var(--sand-dark)] rounded-lg text-sm font-medium text-center" fadeTranslate="ABOUT.DATA_ANALYSIS">
+        </span>
+        <span class="px-3 py-2 bg-[var(--sand-light)] dark:bg-[var(--sand-dark)] rounded-lg text-sm font-medium text-center">
+          Dashboards
+        </span>
+        <span class="px-3 py-2 bg-[var(--sand-light)] dark:bg-[var(--sand-dark)] rounded-lg text-sm font-medium text-center">
+          ETL
+        </span>
+      </div>
+
+      <div class="text-center">
+        <div class="relative inline-block text-left">
+          <!-- Botón principal -->
+          <button 
+            (click)="toggleMenu()" 
+            class="bg-[var(--terracotta-dark)] dark:bg-terracota-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-200"
+            fadeTranslate="ABOUT.DOWNLOAD">
+          </button>
+
+          <!-- Menú desplegable -->
+          <div *ngIf="menuOpen" class="absolute right-0 mt-2 w-50 bg-white dark:bg-[var(--sand-dark)] rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50">
+            <button (click)="downloadCV('es')" class="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-terracota-100 dark:hover:bg-gray-700 rounded-t-lg">
+              📄 CV en Español
+            </button>
+            <button (click)="downloadCV('en')" class="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-terracota-100 dark:hover:bg-gray-700 rounded-b-lg">
+              📄 Resume in English
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

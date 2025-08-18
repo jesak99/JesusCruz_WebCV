@@ -1,0 +1,35 @@
+<footer class="bg-[var(--sand-dark)] dark:bg-[var(--sand-light)] transition-colors duration-300 border-t border-[var(--terracotta-dark)] dark:border-[var(--terracotta-light)] shadow-inner">
+  <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <img src="assets/images/Logo_SF.png" alt="Logo" class="w-20 h-20" />
+    </div>
+
+    <!-- Enlaces -->
+    <nav class="flex gap-6 text-sm">
+      <a href="#about" class="text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)] hover:underline" fadeTranslate="HEADER.ABOUT"></a>
+      <a href="#skills" class="text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)] hover:underline" fadeTranslate="HEADER.SKILLS"></a>
+      <a  href="#projects" class="text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)] hover:underline" fadeTranslate="HEADER.PROJECTS"></a>
+      <a href="#contact" class="text-[var(--terracotta-dark)] dark:text-[var(--terracotta-light)] hover:underline" fadeTranslate="HEADER.CONTACT"></a>
+    </nav>
+
+    <!-- Redes Sociales -->
+    <div class="flex gap-4">
+      <a href="https://github.com/jesak99" target="_blank" class="text-rojo-logo hover:text-[var(--terracotta-light)] dark:hover:text-[var(--terracotta-dark)] transition hover:scale-110 transition-transform">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-1.8c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.6 1.1 1.6 1.1 1 .1.7 2.1 2.9 2.1 1.6 0 2.3-.7 2.6-1.3.1-.7.4-1.1.7-1.3-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.4-2.4 1.1-3.3 0-.3-.5-1.4.1-2.9 0 0 .9-.3 3.1 1.2a10.6 10.6 0 0 1 5.6 0c2.2-1.5 3.1-1.2 3.1-1.2.6 1.5.1 2.6.1 2.9.7.9 1.1 2 1.1 3.3 0 4.6-2.8 5.6-5.5 5.9.4.3.8 1 .8 2.1v3.1c0 .3.2.6.8.5A10.99 10.99 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/jesus-cruz-morales/" target="_blank" class="text-rojo-logo hover:text-[var(--terracotta-light)] dark:hover:text-[var(--terracotta-dark)] transition hover:scale-110 transition-transform">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M19 0h-14c-2.8 0-5 2.2-5 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5v-14c0-2.8-2.2-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.4c-1 0-1.8-.8-1.8-1.8S5.5 4 6.5 4s1.8.8 1.8 1.8S7.5 7.6 6.5 7.6zM20 19h-3v-5.6c0-1.3-.5-2.1-1.6-2.1-1.3 0-1.9.9-1.9 2.1V19h-3v-10h3v1.3c.5-.8 1.5-1.6 3.2-1.6 2.3 0 4.3 1.5 4.3 4.9V19z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Pie de pagina -->
+  <div class="text-center text-xs py-4 text-gray-600 dark:text-gray-400 border-t border-[var(--terracotta-dark)] dark:border-[var(--terracotta-light)]">
+    <p>{{ 'FOTTER.PHRASE' | translate:{ currentYear: currentYear } }}</p>
+  </div>
+</footer>

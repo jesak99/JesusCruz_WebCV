@@ -1,0 +1,37 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1280" viewBox="0 0 2560 1280" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFF2DF" stop-opacity="1"></stop>
+      <stop offset="1" stop-color="#F2E8DC" stop-opacity="1"></stop>
+    </linearGradient>
+
+    <!-- patrón pequeño para texturas -->
+    <pattern id="smallTile" width="320" height="160" patternUnits="userSpaceOnUse">
+      <rect width="320" height="160" fill="transparent"></rect>
+      <path d="M0 80 L24 56 L48 80 L72 56 L96 80 L120 56 L144 80 L168 56 L192 80 L216 56 L240 80 L264 56 L288 80 L312 56 L336 80" stroke="#D2684F" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.08"></path>
+      <rect x="0" y="152" width="320" height="8" fill="#D2684F" opacity="0.06"></rect>
+    </pattern>
+  </defs>
+
+  <!-- Fondo suave -->
+  <rect width="2560" height="1280" fill="url(#g)"></rect>
+
+  <!-- Textura repetida tenue -->
+  <rect width="2560" height="1280" fill="url(#smallTile)" opacity="0.45"></rect>
+
+  <!-- Elementos geométricos grandes (decorativos) -->
+  <!-- Banda horizontal con grecas en centro-izquierda -->
+  <g transform="translate(0,380)">
+    <rect x="0" y="0" width="2560" height="220" fill="#FFF2DF" opacity="0.85"></rect>
+    <path d="M30 110 L60 86 L90 110 L120 86 L150 110 L180 86 L210 110 L240 86 L270 110" stroke="#D2684F" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.95"></path>
+    <!-- Diamantes grandes -->
+    <g transform="translate(380,20) scale(1.6)">
+      <polygon points="40,0 80,40 40,80 0,40" fill="#D2684F" opacity="0.95"></polygon>
+      <polygon points="40,18 62,40 40,62 18,40" fill="#FFF2DF"></polygon>
+    </g>
+  </g>
+
+  <!-- Sutil vignette abajo a la derecha -->
+  <ellipse cx="2100" cy="1050" rx="700" ry="220" fill="#A63D40" opacity="0.06"></ellipse>
+</svg>

@@ -1,0 +1,147 @@
+<header class="fixed w-full z-50 transition-colors duration-300"
+  [ngClass]="{
+    'bg-transparent backdrop-blur-md': !isScrolled,
+    'bg-[var(--sand-dark)] dark:bg-[var(--sand-light)] backdrop-blur-md shadow-md':
+      isScrolled
+  }">
+
+  <div class="max-w-7xl mx-auto px-4 py-3 flex md:flex-row items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <img src="assets/images/Logo_SF.png" alt="Logo" class="h-12 w-auto" />
+      </a>
+    </div>
+
+    <!-- Navegacion -->
+    <nav class="hidden md:flex lg:flex-1 justify-center space-x-6 items-center">
+      <a
+        href="#about"
+        [class.font-bold]="activeSection === 'about'"
+        [class.text-terracota-700]="activeSection === 'about' && !isDarkMode"
+        [class.dark:text-terracota-200]="activeSection === 'about' && isDarkMode"
+        class="text-[var(--terracotta-dark)] hover:text-terracota-700 dark:hover:text-terracota-200 font-medium transition-colors"
+        fadeTranslate="HEADER.ABOUT">
+      </a>
+      <a
+        href="#skills"
+        [class.font-bold]="activeSection === 'skills'"
+        [class.text-terracota-700]="activeSection === 'skills' && !isDarkMode"
+        [class.dark:text-terracota-200]="activeSection === 'skills' && isDarkMode"
+        class="text-[var(--terracotta-dark)] hover:text-terracota-700 dark:hover:text-terracota-200 font-medium transition-colors"
+        fadeTranslate="HEADER.SKILLS">
+      </a>
+      <a
+        href="#projects"
+        [class.font-bold]="activeSection === 'projects'"
+        [class.text-terracota-700]="activeSection === 'projects' && !isDarkMode"
+        [class.dark:text-terracota-200]="activeSection === 'projects' && isDarkMode"
+        class="text-[var(--terracotta-dark)] hover:text-terracota-700 dark:hover:text-terracota-200 font-medium transition-colors"
+        fadeTranslate="HEADER.PROJECTS">
+      </a>
+      <a
+        href="#contact"
+        [class.font-bold]="activeSection === 'contact'"
+        [class.text-terracota-700]="activeSection === 'contact' && !isDarkMode"
+        [class.dark:text-terracota-200]="activeSection === 'contact' && isDarkMode"
+        class="text-[var(--terracotta-dark)] hover:text-terracota-700 dark:hover:text-terracota-200 font-medium transition-colors"
+        fadeTranslate="HEADER.CONTACT">
+      </a>
+    </nav>
+
+    <!-- Selector de idioma y tema -->
+    <div class="hidden md:flex lg:flex-1 justify-end items-center space-x-2">
+      <!-- Selector de idioma -->
+      <div class="relative w-40">
+        <!-- Icono de idioma -->
+        <div class="pointer-events-none absolute inset-y-0 left-3 flex items-center">
+          <svg class="h-5 w-5 text-black dark:text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3c5.25 0 9 3.75 9 9s-3.75 9-9 9-9-3.75-9-9 3.75-9 9-9zM3.6 9h16.8M3.6 15h16.8M12 3c2.25 2.25 3.6 5.25 3.6 9s-1.35 6.75-3.6 9c-2.25-2.25-3.6-5.25-3.6-9s1.35-6.75 3.6-9z"/>
+          </svg>
+        </div>
+        <!-- Select de idioma-->
+        <select
+          [(ngModel)]="selectedLanguage"
+          (change)="changeLanguage(selectedLanguage)"
+          class="block w-full appearance-none bg-transparent border border-black dark:border-gray-600 rounded-md pl-10 pr-4 py-2 text-sm text-black dark:text-gray-300 focus:outline-none transition">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+        <!-- Flecha personalizada -->
+        <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-black dark:text-gray-300">▼</span>
+      </div>
+
+      <!-- Boton de tema -->
+      <button
+        (click)="toggleTheme()"
+        class="text-xl"
+        [ngClass]="{ 'drop-shadow-md': !isDarkMode }"
+        [title]="isDarkMode ? 'Modo claro' : 'Modo oscuro'">
+        {{ isDarkMode ? "☀️" : "🌙" }}
+      </button>
+    </div>
+
+    <!-- Boton dispositivo movil -->
+    <button class="md:hidden text-2xl text-rojo-logo" (click)="toggleMenu()">
+      ☰
+    </button>
+
+    <!-- Menu movil -->
+    <div *ngIf="mobileMenuOpen" class="absolute top-16 left-0 bg-[var(--sand-dark)] dark:bg-[var(--sand-light)] shadow-lg rounded p-4 w-full flex flex-col space-y-2 md:hidden z-50">
+      <a
+        href="#about"
+        [class.font-bold]="activeSection === 'about'"
+        [class.text-terracota-700]="activeSection === 'about' && !isDarkMode"
+        [class.dark:text-terracota-200]="activeSection === 'about' && isDarkMode"
+        class="text-[var(--terracotta-dark)] hover:text-terracota-700 dark:hover:text-terracota-200 font-medium transition-colors">
+        {{"HEADER.ABOUT" | translate}}
+      </a>
+      <a
+        href="#skills"
+        [class.font-bold]="activeSection === 'skills'"
+        [class.text-terracota-700]="activeSection === 'skills' && !isDarkMode"
+        [class.dark:text-terracota-200]="activeSection === 'skills' && isDarkMode"
+        class="text-[var(--terracotta-dark)] hover:text-terracota-700 dark:hover:text-terracota-200 font-medium transition-colors">
+        {{"HEADER.SKILLS" | translate}}
+      </a>
+      <a
+        href="#projects"
+        [class.font-bold]="activeSection === 'projects'"
+        [class.text-terracota-700]="activeSection === 'projects' && !isDarkMode"
+        [class.dark:text-terracota-200]="activeSection === 'projects' && isDarkMode"
+        class="text-[var(--terracotta-dark)] hover:text-terracota-700 dark:hover:text-terracota-200 font-medium transition-colors">
+        {{"HEADER.PROJECTS" | translate}}
+      </a>
+      <a
+        href="#contact"
+        [class.font-bold]="activeSection === 'contact'"
+        [class.text-terracota-700]="activeSection === 'contact' && !isDarkMode"
+        [class.dark:text-terracota-200]="activeSection === 'contact' && isDarkMode"
+        class="text-[var(--terracotta-dark)] hover:text-terracota-700 dark:hover:text-terracota-200 font-medium transition-colors">
+        {{"HEADER.CONTACT" | translate}}
+      </a>
+
+      <!-- Selector de idioma -->
+      <div class="relative inline-block">
+        <div class="pointer-events-none absolute inset-y-0 left-3 flex items-center">
+          <svg class="h-5 w-5 text-dark dark:text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3c5.25 0 9 3.75 9 9s-3.75 9-9 9-9-3.75-9-9 3.75-9 9-9zM3.6 9h16.8M3.6 15h16.8M12 3c2.25 2.25 3.6 5.25 3.6 9s-1.35 6.75-3.6 9c-2.25-2.25-3.6-5.25-3.6-9s1.35-6.75 3.6-9z"/>
+          </svg>
+        </div>
+        <select
+          [(ngModel)]="selectedLanguage"
+          (change)="changeLanguage(selectedLanguage)"
+          class="block w-full appearance-none bg-transparent border border-black dark:border-gray-600 rounded-md pl-10 pr-4 py-2 text-sm text-black dark:text-gray-300 focus:outline-none transition">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+        <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 text-black dark:text-gray-300">▼</span>
+      </div>
+
+      <!-- Boton de tema -->
+      <button (click)="toggleTheme()" class="text-left text-black dark:text-white transition-colors">
+        {{isDarkMode ? ('THEME.LIGHT' | translate) : ('THEME.DARK' | translate)}}
+      </button>
+    </div>
+  </div>
+</header>
