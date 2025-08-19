@@ -24,6 +24,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  background-color: var(--bg-color);
+}
 
 .section-bg {
   position: relative;
@@ -58,3 +63,36 @@ html {
   opacity: 1;
 }
 
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0); /* 100% invisible */
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Aparece suavemente */
+  html:hover::-webkit-scrollbar-thumb,
+  html:active::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.5);
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.3s ease;
+  }
+
+  *:hover {
+    scrollbar-color: rgba(128, 128, 128, 0.5) transparent;
+  }
+}

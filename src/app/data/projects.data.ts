@@ -4,8 +4,8 @@ export const projectsEs = [
     description: "Portafolio personal con Angular y Tailwind, pensado para una presentación clara y atractiva de mis habilidades y proyectos.",
     image: "assets/images/projects/Web_CV.webp",
     tecnologies: ['Angular', 'Tailwind', 'Ngx Translate'],
-    demo: "",
-    code: "https://github.com/jesus/proyecto1"
+    demo: "https://jesuscmx.dev",
+    code: "https://github.com/jesak99/JesusCruz_WebCV"
   },
   {
     title: "PWA San Jacinto Amilpas",
@@ -23,8 +23,8 @@ export const projectsEn = [
     description: "Personal portfolio built with Angular and Tailwind, aimed at showcasing my skills and projects in a clear and visually appealing way.",
     image: "assets/images/projects/Web_CV.webp",
     tecnologies: ['Angular', 'Tailwind', 'Ngx Translate'],
-    demo: "",
-    code: "https://github.com/jesus/proyecto1"
+    demo: "https://jesuscmx.dev",
+    code: "https://github.com/jesak99/JesusCruz_WebCV"
   },
   {
     title: "PWA San Jacinto Amilpas",
