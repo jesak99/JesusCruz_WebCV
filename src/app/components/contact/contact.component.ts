@@ -67,27 +67,28 @@ export class ContactComponent {
 
     this.enviando = true;
 
-    const url = 'https://formsubmit.co/jesuscruzmorales.dev@gmail.com';
-    const headers = new HttpHeaders({ Accept: 'application/json' });
+    const url = 'https://script.google.com/macros/s/AKfycbz6sXAXe0emaQEDAyXKb4hDNVsol4n09kG9H6XHCK_FxOJXQOxFHlRdWtbtmKD83JPI/exec'
 
-    const data = {
-      ...this.formData.value,
-      _captcha: 'false',
-    };
+    const formData = new FormData();
+    formData.append('nombre', this.formData.value.nombre || '');
+    formData.append('email', this.formData.value.email || '');
+    formData.append('mensaje', this.formData.value.mensaje || '');
 
-    this.http.post(url, data, { headers, responseType: 'text' }).subscribe({
-      next: () => {
-        this.enviando = false;
-        this.formData.reset();
-        const mensaje = this.translate.instant('CONTACT.SUCCESS');
-        this.mostrarToast(mensaje, 'success');
-      },
-      error: (err) => {
-        this.enviando = false;
-        const mensaje = this.translate.instant('CONTACT.ERROR');
-        this.mostrarToast(mensaje, 'error');
-      },
-    });
+    fetch(url, {
+      method: 'POST',
+      body: formData
+    })
+    .then(() => {
+      this.enviando = false;
+      this.formData.reset();
+      const mensaje = this.translate.instant('CONTACT.SUCCESS');
+      this.mostrarToast(mensaje, 'success');
+    })
+    .catch(() => {
+      this.enviando = false;
+      const mensaje = this.translate.instant('CONTACT.ERROR');
+      this.mostrarToast(mensaje, 'error');
+     });
   }
 
   mostrarToast(mensaje: string, tipo: 'success' | 'error') {

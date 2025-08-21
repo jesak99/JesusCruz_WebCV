@@ -30,6 +30,10 @@ body {
   background-color: var(--bg-color);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .section-bg {
   position: relative;
   overflow: hidden;

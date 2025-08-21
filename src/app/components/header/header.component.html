@@ -87,7 +87,8 @@
     </button>
 
     <!-- Menu movil -->
-    <div *ngIf="mobileMenuOpen" class="absolute top-16 left-0 bg-[var(--sand-dark)] dark:bg-[var(--sand-light)] shadow-lg rounded p-4 w-full flex flex-col space-y-2 md:hidden z-50">
+    <div [ngClass]="{'scale-y-100 opacity-100 pointer-events-auto': mobileMenuOpen, 'scale-y-0 opacity-0 pointer-events-none': !mobileMenuOpen}"
+      class="absolute top-16 left-0 bg-[var(--sand-dark)] dark:bg-[var(--sand-light)] shadow-lg rounded p-4 w-full flex flex-col space-y-2 md:hidden z-50 transform origin-top transition-all duration-300 ease-out">
       <a
         href="#about"
         [class.font-bold]="activeSection === 'about'"
